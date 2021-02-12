@@ -24,25 +24,31 @@
 </head>
 <body>
     <!--  Navbar  -->
-    <nav class="navbar">
+    <nav id="navbar">
         <div class="navbar__logo">
             <i class="fas fa-cog"></i>
             <a href="#">Luke</a>
         </div>
         <ul class="navbar__menu">
-            <li class="navbar__manu__item">Home</li>
+            <li class="navbar__manu__item active">Home</li>
             <li class="navbar__manu__item">About</li>
             <li class="navbar__manu__item">Skills</li>
             <li class="navbar__manu__item">My work</li>
             <li class="navbar__manu__item">Testimonial</li>
             <li class="navbar__manu__item">Contact</li>
         </ul>
+    <!--  Toggle button  -->
+        <button class="navbar__toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
-    <section class="home">
+    
+    <!--  Home  -->
+    <section id="home">
         <img
                 src="imgs/profile.jpeg"
                 alt="Luke's profile photo"
-                class="home__ avatar"
+                class="home__avatar"
         >
         <h1 class="home__title">Hello, <br/>l"m Lee HyeongJin</h1>
         <h2 class="home__description">A student of Kyonggi University</h2>
@@ -50,7 +56,7 @@
     </section>
 
     <!-- About -->
-    <section class="about">
+    <section id="about" class="section section__container">
         <h1>About me</h1>
         <p>I'm a Mechanical Engineering student</p>
         <div class="about__majors">
@@ -58,7 +64,7 @@
                 <div class="major__icon">
                     <i class="fab fa-html5"></i>
                 </div>
-                <div class="major__title">Front-end</div>
+                <h2 class="major__title">Front-end</h2>
                 <div class="major__description">
                     HTML, CSS, JavaScript, TypeScript,
                     <br/>React
@@ -68,14 +74,14 @@
                 <div class="major__icon">
                     <i class="fas fa-server"></i>
                 </div>
-                <div class="major__title">Backend</div>
+                <h2 class="major__title">Backend</h2>
                 <div class="major__description">Node.js, Go</div>
             </div>
             <div class="major">
                 <div class="major__icon">
                     <i class="fas fa-cogs"></i>
                 </div>
-                <div class="major__title">Mechanical<br/>Engineering</div>
+                <h2 class="major__title">Mechanical<br/>Engineering</h2>
                 <div class="major__description">
                     Mechanics of Materials
                     <br/>Dynamics
@@ -101,68 +107,91 @@
     </section>
 
     <!-- Skills -->
-    <section class="skills">
-        <h1>Skills</h1>
-        <h2>Skills & Attributes</h2>
-        <p>
-            I major in mechanical engineering, but I also like coding.
-        </p>
-        <div class="skillset">
-            <div class="skillset__left">
-                <h3 class="skillset__title">Skills</h3>
-                <div class="skill">
-                    <div class="skill__description">
-                        <span>Front-end</span>
-                        <span>60%</span>
+    <section id="skills" class="section">
+        <div class="section__container">
+            <h1>Skills</h1>
+            <h2>Skills & Attributes</h2>
+            <p>
+                I major in mechanical engineering, but I also like coding.
+            </p>
+            <div class="skillset">
+                <div class="skillset__left">
+                    <h3 class="skillset__title">Skills</h3>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>Front-end</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="skill_bar">
+                            <div class="skill__value" style="width: 60%"></div>
+                        </div>
                     </div>
-                    <div class="skill_bar">
-                        <div class="skill__value"></div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>Back-end</span>
+                            <span>40%</span>
+                        </div>
+                        <div class="skill_bar">
+                            <div class="skill__value" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>Mechanical Engineering</span>
+                            <span>87%</span>
+                        </div>
+                        <div class="skill_bar">
+                            <div class="skill__value" style="width: 87%"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill">
-                    <div class="skill__description">
-                        <span>Back-end</span>
-                        <span>40%</span>
+                <div class="skillset__right">
+                    <div class="tools">
+                        <h3 class="skillset__title">Tools</h3>
+                        <ul class="tools__list">
+                            <li><span>Catia</span></li>
+                            <li><span>Ansys</span></li>
+                            <li><span>Visual Studio Code</span></li>
+                            <li><span>WebStorm</span></li>
+                            <li><span>GoLand</span></li>
+                        </ul>
                     </div>
-                    <div class="skill_bar">
-                        <div class="skill__value"></div>
+                    <div class="etc">
+                        <h3 class="skillset__title">Etc</h3>
+                        <ul class="etc__list">
+                            <li><span>Git</span></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="skill">
-                    <div class="skill__description">
-                        <span>Mechanical Engineering</span>
-                        <span>87%</span>
-                    </div>
-                    <div class="skill_bar">
-                        <div class="skill__value"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skillset__right">
-                <div class="tools">
-                    <h3 class="skillset__title">Tools</h3>
-                    <ul class="tools__list">
-                        <li><span>Catia</span></li>
-                        <li><span>Ansys</span></li>
-                        <li><span>Visual Studio Code</span></li>
-                        <li><span>WebStorm</span></li>
-                        <li><span>GoLand</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="etc">
-                <h3 class="skillset__title">Etc</h3>
-                <ul class="etc__list">
-                    <li><span>Git</span></li>
-                </ul>
             </div>
         </div>
     </section>
+    
     <!-- Work -->
-    <section class="work"></section>
-    <!-- Testimonials -->
-    <section class="testimonials"></section>
+    <section id="work" class="section">
+        <h1>My work</h1>
+        <h3>Projects</h3>
+        <div class="work__categories">
+            <button class="category__btn">All<span class="category__count">8</span></button>
+            <button class="category__btn">Front-end<span class="category__count">3</span></button>
+            <button class="category__btn">Back-end<span class="category__count">3</span></button>
+            <button class="category__btn">Mechanical Engineering<span class="category__count">2</span></button>
+        </div>
+        <div class="work__projects">
+            <a href="" class="project" target="_blank"></a>
+        </div>
+    </section>
+    
     <!-- Contact -->
-    <section class="contact"></section>
+    <section id="contact" class="section">
+        <h1 class="contact__title">Let's talk</h1>
+        <h2 class="contact__email">e93052080@gmail.com</h2>
+        <div class="contact__links">
+            <a href="https://github.com/leehyeongjin1" target="_blank">
+                <i class="fab fa-github-square"></i>
+            </a>
+        </div>
+        <p class="contact__rights">2021 Luke - All rights reserved</p>
+    </section>
 </body>
 </html>
