@@ -95,12 +95,20 @@ p{
 
 /* Navbar */
 #navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-dark-green);
+    background-color: transparent;
     align-items: center;
     color: var(--color-white);
     padding: 8px 12px 12px 12px;
+    transition: all var(--animation-duration) ease-in-out;
+    z-index: 1;
+}
+#navbar.navbar--dark{
+    background-color: var(--color-dark-green);
+    padding: 8px;
 }
 .navbar__menu{
     display: flex;
@@ -137,6 +145,7 @@ p{
 #home{
     background: url("imgs/home_background.png") center/cover no-repeat;
     padding: 40px;
+    padding-top: 120px;
     text-align: center;
 }
 .home__avatar{
