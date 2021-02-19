@@ -12,22 +12,35 @@ document.addEventListener('scroll', () => {
 });
 
 //Handle scrolling when tapping on the navbar menu
-const navbarMenu = document.querySelector('.navbar__menu')
+const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click',()=>{
     const target = event.target;
     const link = target.dataset.link;
     if (link == null){
         return;
     }
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({behavior: 'smooth', block: "center"});
+    scrollIntoView(link);
 });
 
-//
-// const navbarMenu = document.querySelector('.navbar__menu')
-// navbarMenu.addEventListener('click',()=>{
-//     const target = event.target;
-//     const link = target.dataset.link;
-//     if (link == null){
-//         return;
-//     }
+// Handle click on "contact me" button on home
+const homecontactBtn = document.querySelector('.home__contact');
+homecontactBtn.addEventListener('click',()=> {
+    scrollIntoView("#contact");
+});
+
+// Make home slowly fade to transparent as the windows scrolls down
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', ()=>{
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+})
+
+
+
+
+
+
+function scrollIntoView(selector){
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: 'smooth', block: "center"});
+}
