@@ -19,7 +19,17 @@ navbarMenu.addEventListener('click',()=>{
     if (link == null){
         return;
     }
+    navbarMenu.classList.remove('open')
     scrollIntoView(link);
+});
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener('click',()=>{
+    navbarMenu.classList.toggle('open');
+});
+document.addEventListener('scroll', ()=>{
+        navbarMenu.classList.remove('open');
 });
 
 // Handle click on "contact me" button on home
@@ -33,9 +43,22 @@ const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', ()=>{
     home.style.opacity = 1 - window.scrollY / homeHeight;
-})
+});
 
+// Show "arrow up" button when scrolling down
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll',()=> {
+    if (window.scrollY > homeHeight / 2) {
+        arrowUp.classList.add('visible');
+    } else {
+        arrowUp.classList.remove('visible');
+    }
+});
 
+// Handle click on the "arrow up" button
+arrowUp.addEventListener('click',()=>{
+    scrollIntoView('#home')
+});
 
 
 
